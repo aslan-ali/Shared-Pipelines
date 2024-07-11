@@ -14,15 +14,14 @@ on:
   push:
     branches:
       - master
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Git clone repository
-      uses: actions/checkout@v2
+      - name: Git clone repository
+        uses: actions/checkout@v2
         
-    - name: build image
-      run: |
-        docker build . --file Dockerfile --tag test:app
-    
-
+      - name: build image
+        run: |
+          docker build . --file Dockerfile --tag test:app
