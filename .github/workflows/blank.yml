@@ -11,6 +11,9 @@ on:
         description: "Node version"
         required: true
         type: string
+  push:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
